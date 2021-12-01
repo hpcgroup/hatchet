@@ -177,8 +177,4 @@ class CaliperNativeReader:
             else:
                 exc_metrics.append(column)
 
-        metadata = self.filename_or_caliperreader.globals
-
-        return hatchet.graphframe.GraphFrame(
-            graph, dataframe, exc_metrics, inc_metrics, metadata=metadata
-        )
+        return hatchet.graphframe.GraphFrame(graph, dataframe, exc_metrics, inc_metrics)
